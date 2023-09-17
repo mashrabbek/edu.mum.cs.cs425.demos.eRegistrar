@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Student</title>
+</head>
+<body>
+<h1>Register a New Student</h1>
+<form method="post" th:action="@{/students/save}">
+    <input type="text" name="studentNumber" placeholder="Student Number" required>
+    <input type="text" name="firstName" placeholder="First Name" required>
+    <input type="text" name="middleName" placeholder="Middle Name">
+    <input type="text" name="lastName" placeholder="Last Name">
+    <input type="text" name="cgpa" placeholder="GPA" required>
+    <label for="isInternational">International Student:</label>
+    <select id="isInternational" name="isInternational" required>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+    <button type="submit">Register</button>
+</form>
+<a href="/students">List Students</a>
+<a href="/students/register">Register Student</a>
+
+</body>
+</html>
